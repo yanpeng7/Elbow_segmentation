@@ -1,0 +1,51 @@
+{
+    "name": "Unet",
+    "n_gpu": 2,
+
+    "arch": {
+        "type": "UNet",
+        "args": {}
+    },
+
+    "data_loader": {
+        "type": "ElbowDataLoader",
+        "args":{
+            "data_dir": "/export/project/y.yanpeng/h5_data/",
+            "batch_size": 5,
+            "shuffle": true,
+            "validation_split": 0.1,
+            "num_workers": 8
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.003,
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "loss": "dice_loss",
+    "metrics": [
+
+    ],
+    "lr_scheduler": {
+        "type": "StepLR",
+        "args": {
+            "step_size": 50,
+            "gamma": 0.1
+        }
+    },
+    "trainer": {
+        "epochs": 200,
+
+        "save_dir": "saved/",
+        "save_period": 20,
+        "verbosity": 1,
+        
+        "monitor": "min val_loss",
+        "early_stop": 0,
+
+        "tensorboard": true
+    }
+}
