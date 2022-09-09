@@ -4,8 +4,6 @@
 
 Code for the paper "Machine Learning Approaches to Probe Novel Multi-Level Relationships in Post-Traumatic Joint Contracture"
 
-Documentation Incoming. 
-
 <p align="center">
 <img width="409" alt="Screen Shot 2022-03-06 at 11 16 39 PM" src="https://user-images.githubusercontent.com/54511661/156967419-22f53f05-61ff-4750-b8e0-38bc26407e37.png">
 </p>
